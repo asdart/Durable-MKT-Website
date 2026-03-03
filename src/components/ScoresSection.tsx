@@ -539,6 +539,14 @@ export default function ScoresSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const [started, setStarted] = useState(false);
   const [expandedSet, setExpandedSet] = useState<Set<number>>(new Set());
+  const [trailingPad, setTrailingPad] = useState(24);
+
+  useEffect(() => {
+    const update = () => setTrailingPad(Math.max(24, (window.innerWidth - 1200) / 2 + 24));
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
 
   function handleToggle(index: number) {
     setExpandedSet(prev => {
@@ -598,11 +606,11 @@ export default function ScoresSection() {
       <div ref={scrollRef} className="hidden md:block w-full overflow-x-auto no-scrollbar">
         <div
           className="flex gap-[17px] items-start pb-2"
-          style={{ paddingLeft: 'max(24px, calc((100vw - 1200px) / 2 + 24px))' }}
+          style={{ paddingLeft: trailingPad }}
         >
           {cards}
           {/* Trailing spacer — padding-right on flex containers is ignored by browsers when overflowing */}
-          <div className="flex-shrink-0" style={{ width: 'max(24px, calc((100vw - 1200px) / 2 + 24px))' }} />
+          <div className="flex-shrink-0" style={{ width: trailingPad }} />
         </div>
       </div>
 
