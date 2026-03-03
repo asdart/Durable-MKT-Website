@@ -369,7 +369,7 @@ function PlatformCard({
   const extra = criteria.slice(PREVIEW_COUNT);
 
   return (
-    <div className="w-full md:w-[385px] md:flex-shrink-0 bg-black/[0.03] rounded-3xl flex flex-col items-center">
+    <div className="w-[calc(100vw-64px)] flex-shrink-0 md:w-[385px] bg-black/[0.03] rounded-3xl flex flex-col items-center">
       <div className="flex flex-col gap-10 items-center pt-8 pb-6 px-8 w-full">
         {/* Gauge + badge + number */}
         <div className="flex flex-col items-center w-full">
@@ -597,9 +597,14 @@ export default function ScoresSection() {
         </div>
       </div>
 
-      {/* Mobile: stacked full-width cards */}
-      <div className="flex flex-col gap-4 w-full px-4 md:hidden">
-        {cards}
+      {/* Mobile: horizontal scroll with peek */}
+      <div className="md:hidden w-full overflow-x-auto no-scrollbar">
+        {/* Block wrapper so padding-right is respected in scroll width */}
+        <div className="px-4">
+          <div className="flex gap-4 items-start">
+            {cards}
+          </div>
+        </div>
       </div>
 
       {/* Desktop: horizontal scroll — full viewport width */}
