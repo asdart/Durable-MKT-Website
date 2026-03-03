@@ -398,7 +398,6 @@ export default function CategorySection() {
   const sortedByScore = platforms
     .map(p => ({ ...p, score: data[p.key as keyof PlatformScores] }))
     .sort((a, b) => b.score - a.score);
-  const top3 = sortedByScore.slice(0, 3);
   const bestPlatform = sortedByScore[0];
 
   const visibleScore = (score: number) => inView ? score : 0;
