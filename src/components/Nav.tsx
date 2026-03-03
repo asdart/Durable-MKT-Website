@@ -1,6 +1,22 @@
+import { useEffect, useState } from 'react';
+
 export default function Nav() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const id = setTimeout(() => setVisible(true), 150);
+    return () => clearTimeout(id);
+  }, []);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-black/5 h-[60px] flex items-center px-6">
+    <nav
+      className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-black/5 h-[60px] flex items-center px-6"
+      style={{
+        transform: visible ? 'translateY(0)' : 'translateY(-100%)',
+        opacity: visible ? 1 : 0,
+        transition: 'transform 0.5s cubic-bezier(0.16,1,0.3,1), opacity 0.5s ease',
+      }}
+    >
       <div className="max-w-[1200px] mx-auto w-full flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">

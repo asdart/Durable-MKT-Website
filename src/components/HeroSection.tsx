@@ -1,7 +1,23 @@
+import { useEffect, useState } from 'react';
+
 export default function HeroSection() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const id = setTimeout(() => setVisible(true), 400);
+    return () => clearTimeout(id);
+  }, []);
+
   return (
     <section className="pt-24 pb-16 md:pt-[148px] md:pb-32 flex flex-col items-center px-6">
-      <div className="max-w-[1200px] w-full flex flex-col gap-10 md:gap-14 items-center">
+      <div
+        className="max-w-[1200px] w-full flex flex-col gap-10 md:gap-14 items-center"
+        style={{
+          transform: visible ? 'translateY(0)' : 'translateY(28px)',
+          opacity: visible ? 1 : 0,
+          transition: 'transform 0.7s cubic-bezier(0.16,1,0.3,1), opacity 0.7s ease',
+        }}
+      >
 
         {/* Title Block */}
         <div className="flex flex-col gap-8 items-center">
