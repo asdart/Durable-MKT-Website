@@ -23,7 +23,7 @@ const footerLinks: { heading: string; links: string[] }[] = [
 
 export default function Footer() {
   return (
-    <footer className="px-6 pb-6">
+    <footer className="px-4 md:px-6 pb-6">
       <div
         className="rounded-3xl overflow-hidden relative"
         style={{ backgroundColor: 'rgba(0,0,0,0.8)' }}

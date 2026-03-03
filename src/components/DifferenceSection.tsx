@@ -133,7 +133,7 @@ export default function DifferenceSection() {
   const platform = platforms.find(p => p.id === visibleId)!;
 
   return (
-    <section className="pb-16 md:pb-32 flex flex-col items-center px-6">
+    <section className="pb-16 md:pb-32 flex flex-col items-center px-4 md:px-6">
       <div className="max-w-[1200px] w-full flex flex-col gap-8 md:gap-12 items-center">
         {/* Header */}
         <div className="flex flex-col gap-8 md:gap-14 items-center w-full md:w-[480px]">

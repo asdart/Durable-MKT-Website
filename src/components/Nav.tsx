@@ -10,7 +10,7 @@ export default function Nav() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-black/5 h-[60px] flex items-center px-6"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-black/5 h-[60px] flex items-center px-4 md:px-6"
       style={{
         transform: visible ? 'translateY(0)' : 'translateY(-100%)',
         opacity: visible ? 1 : 0,

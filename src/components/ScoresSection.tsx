@@ -583,7 +583,7 @@ export default function ScoresSection() {
   return (
     <section ref={sectionRef} className="pb-16 md:pb-32 flex flex-col items-center">
       {/* Header */}
-      <div className="max-w-[1200px] w-full flex flex-col gap-6 md:gap-12 items-center px-6 mb-6 md:mb-12">
+      <div className="max-w-[1200px] w-full flex flex-col gap-6 md:gap-12 items-center px-4 md:px-6 mb-6 md:mb-12">
         <div className="flex flex-col gap-4 items-center">
           <p className="text-[14px] font-semibold leading-5 text-[#7d5d9a] text-center">Overall Rankings</p>
           <div className="max-w-[480px] flex flex-col gap-4 items-center text-center">
@@ -598,7 +598,7 @@ export default function ScoresSection() {
       </div>
 
       {/* Mobile: stacked full-width cards */}
-      <div className="flex flex-col gap-4 w-full px-6 md:hidden">
+      <div className="flex flex-col gap-4 w-full px-4 md:hidden">
         {cards}
       </div>
 

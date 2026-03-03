@@ -7,7 +7,7 @@ const imgStarMask  = "https://www.figma.com/api/mcp/asset/5c584985-daf9-4dd5-9a7
 
 export default function CtaSection() {
   return (
-    <section className="pb-8 px-6">
+    <section className="pb-8 px-4 md:px-6">
       <div className="bg-black/[0.03] rounded-3xl py-24 px-8 flex flex-col items-center gap-8 text-center">
         {/* Mobile title */}
         <h2 className="font-display text-[56px] leading-[52px] text-black/80 md:hidden">

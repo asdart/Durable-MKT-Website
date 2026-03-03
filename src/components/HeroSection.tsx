@@ -9,7 +9,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="pt-24 pb-16 md:pt-[148px] md:pb-32 flex flex-col items-center px-6">
+    <section className="pt-24 pb-16 md:pt-[148px] md:pb-32 flex flex-col items-center px-4 md:px-6">
       <div
         className="max-w-[1200px] w-full flex flex-col gap-10 md:gap-14 items-center"
         style={{
