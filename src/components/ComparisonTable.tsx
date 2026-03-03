@@ -203,10 +203,10 @@ export default function ComparisonTable() {
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-[12px] font-medium px-2 py-0.5 rounded-full"
-                      style={{ backgroundColor: 'rgba(73,138,103,0.2)', color: '#3e7457' }}>
+                      style={{ backgroundColor: 'rgba(0,0,0,0.2)', color: 'white' }}>
                       {overall.durable.label}
                     </span>
-                    <span className="text-[14px] font-semibold text-white/80 w-[26px] text-center">{overall.durable.score}</span>
+                    <span className="text-[14px] font-semibold text-white w-[26px] text-center">{overall.durable.score}</span>
                   </div>
                 </div>
 
